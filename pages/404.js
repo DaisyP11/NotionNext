@@ -13,11 +13,17 @@ const NoFound = props => {
   return <DynamicLayout theme={theme} layoutName='Layout404' {...props} />
 }
 
-export async function getStaticProps(req) {
-  const { locale } = req
+//export async function getStaticProps(req) {
+//  const { locale } = req
 
-  const props = (await getGlobalData({ from: '404', locale })) || {}
-  return { props }
+//  const props = (await getGlobalData({ from: '404', locale })) || {}
+//  return { props }
+//}
+export async function getStaticProps() {
+  return {
+    props: {}
+  }
 }
+
 
 export default NoFound
